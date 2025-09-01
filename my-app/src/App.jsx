@@ -66,7 +66,7 @@ function Carousel({ onChange }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 8000)
+    }, 10000)
     return () => clearInterval(timer)
   }, [slides.length])
 
@@ -306,13 +306,17 @@ function App() {
     <div className="shop-root">
       <Header active={section} onChange={setSection} />
 
-      <main>
-        <Carousel onChange={setSection} />
-        {section === 'home' && <Home />}
-        {section === 'about' && <About />}
-        {section === 'productos' && <Products />}
-        {section === 'contact' && <Contact />}
-      </main>
+              <main>
+          {section === 'home' && (
+            <>
+              <Carousel onChange={setSection} />
+              <Home />
+            </>
+          )}
+          {section === 'about' && <About />}
+          {section === 'productos' && <Products />}
+          {section === 'contact' && <Contact />}
+        </main>
     </div>
   )
 }

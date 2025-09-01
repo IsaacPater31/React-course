@@ -384,22 +384,22 @@ main {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateX(100%);
+  transform: translateX(100%) scale(0.95);
   pointer-events: none;
 }
 
 .carousel-slide.active {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   pointer-events: auto;
 }
 
 .carousel-slide.prev {
-  transform: translateX(-100%);
+  transform: translateX(-100%) scale(0.95);
 }
 
 .carousel-wrapper {
@@ -469,13 +469,13 @@ main {
     0 25px 80px rgba(0, 0, 0, 0.6),
     0 12px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(0);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  transform: translateX(0) translateY(0);
   opacity: 1;
 }
 
 .carousel-slide:not(.active) .carousel-text {
-  transform: translateX(50px);
+  transform: translateX(80px) translateY(20px);
   opacity: 0;
 }
 
@@ -500,13 +500,13 @@ main {
   position: relative;
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
   letter-spacing: -0.02em;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   transform: translateY(0);
   opacity: 1;
 }
 
 .carousel-slide:not(.active) .carousel-title {
-  transform: translateY(30px);
+  transform: translateY(40px);
   opacity: 0;
 }
 
@@ -532,13 +532,13 @@ main {
   position: relative;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   letter-spacing: 0.01em;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
   transform: translateY(0);
   opacity: 1;
 }
 
 .carousel-slide:not(.active) .carousel-subtitle {
-  transform: translateY(30px);
+  transform: translateY(40px);
   opacity: 0;
 }
 
@@ -562,13 +562,13 @@ main {
   font-weight: 300;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
   transform: translateY(0);
   opacity: 1;
 }
 
 .carousel-slide:not(.active) .carousel-description {
-  transform: translateY(30px);
+  transform: translateY(40px);
   opacity: 0;
 }
 
@@ -583,7 +583,7 @@ main {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
   box-shadow: 
     0 8px 24px rgba(0, 0, 0, 0.3),
     0 4px 12px rgba(0, 0, 0, 0.2);
@@ -596,7 +596,7 @@ main {
 }
 
 .carousel-slide:not(.active) .carousel-btn {
-  transform: translateY(30px);
+  transform: translateY(40px);
   opacity: 0;
 }
 
@@ -636,13 +636,13 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(0);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transform: translateX(0) translateY(0);
   opacity: 1;
 }
 
 .carousel-slide:not(.active) .carousel-image {
-  transform: translateX(-50px);
+  transform: translateX(-80px) translateY(20px);
   opacity: 0;
 }
 
@@ -722,7 +722,7 @@ main {
   background: rgba(255, 255, 255, 0.12);
   border: 2px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -737,7 +737,7 @@ main {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-dot.active {
@@ -865,13 +865,14 @@ main {
 
 /* Updated hero section - Black & Gold */
 .hero {
-  margin: 1.5rem 0;
+  margin: 2rem auto;
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
   padding: 4rem 2rem;
   border-radius: 0;
   color: white;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   width: 100%;
+  max-width: 1400px;
   position: relative;
   overflow: hidden;
 }
@@ -899,9 +900,10 @@ main {
 }
 
 .hero-content {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .hero h2 {
@@ -1070,7 +1072,10 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
 }
 
 .info-card {
@@ -1302,7 +1307,7 @@ main {
   .carousel-content {
     padding: 0 2rem;
     flex-direction: column;
-    text-align: center;
+  text-align: center;
     gap: 2rem;
   }
   
@@ -1364,7 +1369,7 @@ main {
     gap: 1.5rem;
   }
   
-  .info-grid {
+.info-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
   }
@@ -1492,10 +1497,10 @@ main {
   
   .info-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  gap: 1rem;
+}
   
-  .info-card {
+.info-card {
     padding: 1.5rem;
   }
   
@@ -1508,7 +1513,7 @@ main {
   }
   
   .card-body {
-    padding: 1rem;
+  padding: 1rem;
   }
   
   .card-actions {
@@ -1521,7 +1526,7 @@ main {
     justify-content: center;
   }
   
-  .contact-form {
+.contact-form {
     padding: 0 1rem;
   }
   
@@ -1533,7 +1538,7 @@ main {
 
 @media (max-width: 480px) {
   .nav-inner {
-    flex-direction: column;
+  flex-direction: column;
     height: auto;
     padding: 1rem;
     gap: 1rem;
@@ -1584,8 +1589,8 @@ main {
     font-size: 0.8rem;
   }
   
-  .contact-form input,
-  .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 0.75rem;
     font-size: 0.8rem;
   }
