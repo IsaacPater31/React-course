@@ -53,6 +53,15 @@ function Carousel({ onChange }) {
       buttonAction: () => onChange('productos')
     },
     {
+      id: 'blog',
+      title: 'Blog MOI Fashion',
+      subtitle: 'Tendencias y Estilo',
+      description: 'Descubre las últimas tendencias, consejos de estilo y novedades de nuestra marca. Mantente actualizado con contenido exclusivo sobre moda y elegancia.',
+      image: 'https://picsum.photos/seed/blog/800/600',
+      buttonText: 'Leer Blog',
+      buttonAction: () => onChange('blog')
+    },
+    {
       id: 'contact',
       title: 'Contáctanos',
       subtitle: 'Estamos Aquí Para Ti',
@@ -66,7 +75,7 @@ function Carousel({ onChange }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 10000)
+    }, 12000)
     return () => clearInterval(timer)
   }, [slides.length])
 
