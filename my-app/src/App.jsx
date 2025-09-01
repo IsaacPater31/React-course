@@ -185,6 +185,105 @@ function Products() {
   )
 }
 
+function Blog() {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Nueva Colección Primavera 2024",
+      excerpt: "Descubre nuestra última colección inspirada en la elegancia de la primavera. Diseños frescos y sofisticados que combinan comodidad con estilo.",
+      image: "https://picsum.photos/seed/blog1/600/400",
+      date: "15 Mar 2024",
+      category: "Colecciones",
+      likes: 284,
+      comments: 32
+    },
+    {
+      id: 2,
+      title: "Guía de Estilo: Combinando Colores",
+      excerpt: "Aprende los secretos para crear combinaciones de colores perfectas que reflejen tu personalidad y elegancia natural.",
+      image: "https://picsum.photos/seed/blog2/600/400",
+      date: "12 Mar 2024",
+      category: "Estilo",
+      likes: 156,
+      comments: 18
+    },
+    {
+      id: 3,
+      title: "Sostenibilidad en la Moda",
+      excerpt: "Conoce nuestro compromiso con la moda sostenible y cómo estamos reduciendo nuestro impacto ambiental.",
+      image: "https://picsum.photos/seed/blog3/600/400",
+      date: "10 Mar 2024",
+      category: "Sostenibilidad",
+      likes: 342,
+      comments: 45
+    },
+    {
+      id: 4,
+      title: "Tendencias Otoño-Invierno",
+      excerpt: "Las tendencias más importantes para la temporada otoño-invierno que no puedes perderte.",
+      image: "https://picsum.photos/seed/blog4/600/400",
+      date: "8 Mar 2024",
+      category: "Tendencias",
+      likes: 198,
+      comments: 27
+    },
+    {
+      id: 5,
+      title: "Cuidado de Prendas Premium",
+      excerpt: "Consejos expertos para mantener tus prendas premium en perfecto estado por más tiempo.",
+      image: "https://picsum.photos/seed/blog5/600/400",
+      date: "5 Mar 2024",
+      category: "Cuidado",
+      likes: 267,
+      comments: 38
+    },
+    {
+      id: 6,
+      title: "Historia de MOI Fashion",
+      excerpt: "Descubre la historia detrás de nuestra marca y cómo hemos evolucionado para convertirnos en referente de elegancia.",
+      image: "https://picsum.photos/seed/blog6/600/400",
+      date: "3 Mar 2024",
+      category: "Historia",
+      likes: 423,
+      comments: 52
+    }
+  ]
+
+  return (
+    <section className="blog">
+      <div className="blog-header">
+        <h1 className="blog-title">Blog MOI Fashion</h1>
+        <p className="blog-subtitle">Descubre las últimas tendencias, consejos de estilo y novedades de nuestra marca</p>
+      </div>
+      
+      <div className="blog-grid">
+        {blogPosts.map((post) => (
+          <article key={post.id} className="blog-card">
+            <div className="blog-card-image">
+              <img src={post.image} alt={post.title} />
+              <div className="blog-card-overlay">
+                <span className="blog-category">{post.category}</span>
+              </div>
+            </div>
+            <div className="blog-card-content">
+              <div className="blog-card-meta">
+                <span className="blog-date">{post.date}</span>
+                <div className="blog-stats">
+                  <span className="blog-likes">❤️ {post.likes}</span>
+                  <span className="blog-comments">💬 {post.comments}</span>
+                </div>
+              </div>
+              <h3 className="blog-card-title">{post.title}</h3>
+              <p className="blog-card-excerpt">{post.excerpt}</p>
+              <button className="blog-read-more">Leer más</button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function Contact() {
   return (
     <section className="contact">
@@ -218,6 +317,7 @@ function Header({ active, onChange }) {
     { id: 'home', label: 'Inicio' },
     { id: 'about', label: 'Nosotros' },
     { id: 'productos', label: 'Productos' },
+    { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contacto' }
   ]
 
@@ -315,6 +415,7 @@ function App() {
           )}
           {section === 'about' && <About />}
           {section === 'productos' && <Products />}
+          {section === 'blog' && <Blog />}
           {section === 'contact' && <Contact />}
         </main>
     </div>
