@@ -2091,6 +2091,12 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.instagram-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .instagram-category {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
@@ -2099,6 +2105,16 @@ main {
   padding: 0.3rem 0.6rem;
   border-radius: 8px;
   border: 1px solid rgba(184, 134, 11, 0.3);
+}
+
+.instagram-content-type {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .instagram-embed-container {
