@@ -2091,10 +2091,14 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.instagram-date {
-  color: rgba(255, 255, 255, 0.7);
+.instagram-category {
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 500;
+  background: rgba(184, 134, 11, 0.15);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(184, 134, 11, 0.3);
 }
 
 .instagram-embed-container {

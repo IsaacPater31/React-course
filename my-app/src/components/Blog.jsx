@@ -77,26 +77,31 @@ function Blog() {
       url: "https://www.instagram.com/reel/DHt9VAKRorR/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==", // Reemplaza con URL real
       caption: "Nueva colección primavera 2024 🌸 #MOIFashion #Primavera2024",
       type: "instagram",
-      date: "20 Mar 2024"
+      category: "Colección"
     },
     {
       id: 8,
-      url: "https://www.instagram.com/p/C8X9Y2ZABC456/", // Reemplaza con URL real
+      url: "https://www.instagram.com/reel/DHd8zv1MMrx/", // Reemplaza con URL real
       caption: "Tendencias de moda para esta temporada ✨ #Tendencias #Moda",
       type: "instagram",
-      date: "18 Mar 2024"
+      category: "Colección"
     },
     {
       id: 9,
-      url: "https://www.instagram.com/p/C8X9Y2ZABC789/", // Reemplaza con URL real
+      url: "https://www.instagram.com/p/DE0EKSdRDGa/?img_index=1", // Reemplaza con URL real
       caption: "Behind the scenes de nuestra sesión de fotos 📸 #BehindTheScenes",
       type: "instagram",
-      date: "16 Mar 2024"
+      category: "Colección"
     }
   ]
 
   // Combinar posts del blog y de Instagram
-  const allPosts = [...blogPosts, ...instagramPosts].sort((a, b) => new Date(b.date) - new Date(a.date))
+  const allPosts = [...blogPosts, ...instagramPosts].sort((a, b) => {
+    if (a.type === 'instagram' && b.type === 'instagram') return 0
+    if (a.type === 'instagram') return -1
+    if (b.type === 'instagram') return 1
+    return new Date(b.date) - new Date(a.date)
+  })
 
   return (
     <section className="blog">
@@ -112,7 +117,7 @@ function Blog() {
                           <div className="instagram-elegant-card">
                             <div className="instagram-header">
                               <span className="instagram-badge">📸 Instagram</span>
-                              <span className="instagram-date">{post.date}</span>
+                              <span className="instagram-category">{post.category}</span>
                             </div>
                             <div className="instagram-embed-container">
                               <InstagramPost url={post.url} />
