@@ -1479,15 +1479,19 @@ main {
   }
   
   .carousel-section {
-    height: 70vh;
-    min-height: 500px;
+    height: 80vh;
+    min-height: 600px;
+    margin-bottom: 3rem;
   }
   
   .carousel-content {
     padding: 0 2rem;
     flex-direction: column;
-  text-align: center;
-    gap: 2rem;
+    text-align: center;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   
   .carousel-text {
@@ -1603,15 +1607,19 @@ main {
   }
   
   .carousel-section {
-    height: 60vh;
-    min-height: 400px;
+    height: 75vh;
+    min-height: 550px;
+    margin-bottom: 2.5rem;
   }
   
   .carousel-content {
     padding: 0 1rem;
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   
   .carousel-text {
@@ -1894,6 +1902,36 @@ main {
   }
   
   .hero .lead {
+    font-size: 0.85rem;
+  }
+  
+  .carousel-section {
+    height: 70vh;
+    min-height: 500px;
+    margin-bottom: 2rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.75rem;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+  }
+  
+  .carousel-title {
+    font-size: 1.75rem;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1rem;
+  }
+  
+  .carousel-description {
     font-size: 0.85rem;
   }
   
