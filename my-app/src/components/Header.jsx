@@ -15,6 +15,13 @@ function Header({ active, onChange }) {
   const handleNavClick = (id) => {
     onChange(id)
     setIsMenuOpen(false)
+    // Hacer scroll hacia arriba después de cambiar la sección
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, 100)
   }
 
   return (
@@ -24,7 +31,7 @@ function Header({ active, onChange }) {
           <div className="brand">
             <button 
               className="brand-button"
-              onClick={() => onChange('home')}
+              onClick={() => handleNavClick('home')}
               aria-label="Ir al inicio"
             >
               <div className="brand-logo">
@@ -51,7 +58,7 @@ function Header({ active, onChange }) {
                 <li key={it.id}>
                   <button
                     className={"nav-link" + (active === it.id ? ' active' : '')}
-                    onClick={() => onChange(it.id)}
+                    onClick={() => handleNavClick(it.id)}
                   >
                     {it.label}
                   </button>

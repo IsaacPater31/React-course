@@ -2,6 +2,13 @@ function Footer({ onChange }) {
   const handleNavClick = (section) => {
     if (onChange) {
       onChange(section)
+      // Hacer scroll hacia arriba después de cambiar la sección
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      }, 100)
     }
   }
 

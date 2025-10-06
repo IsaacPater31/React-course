@@ -3,8 +3,8 @@ function Home() {
     <section className="home">
       <div className="hero">
         <div className="hero-content">
-          <h2>Eleva Tu Estilo Con Nuestra</h2>
-          <p className="lead">Tu compañero de moda definitivo. Transforma tu guardarropa con nuestra colección exclusiva de elegancia atemporal y diseño sofisticado.</p>
+          <h2>Prendas Importadas de Diseño Sofisticado</h2>
+          <p className="lead">Seleccionamos los mejores diseños importados para crear tu propia presencia. Traemos exclusividad, elegancia y profesionalismo directamente a tu guardarropa.</p>
           <div style={{ marginTop: '2rem' }}>
             <button className="btn primary">Explorar Colección</button>
           </div>
@@ -13,16 +13,16 @@ function Home() {
 
       <section className="info-grid">
         <div className="info-card">
-          <h3>Calidad Premium</h3>
-          <p>Nuestros materiales son seleccionados meticulosamente para ofrecer durabilidad excepcional y confort superior.</p>
+          <h3>Selección Exclusiva</h3>
+          <p>Seleccionamos meticulosamente cada pieza para ofrecerte diseños sofisticados que reflejen elegancia y profesionalismo.</p>
         </div>
         <div className="info-card">
-          <h3>Diseño Exclusivo</h3>
-          <p>Prendas con corte sofisticado que combinan elegancia atemporal con modernidad.</p>
+          <h3>Prendas Importadas</h3>
+          <p>Cada artículo es único y limitado. Diseños americanos de alta calidad que no encontrarás en otras tiendas locales.</p>
         </div>
         <div className="info-card">
-          <h3>Artesanía Excepcional</h3>
-          <p>Cada pieza es creada con atención al detalle y técnicas de confección tradicionales.</p>
+          <h3>Exclusividad Garantizada</h3>
+          <p>Entregamos exclusividad a nuestros clientes a través de prendas cuidadosamente seleccionadas que crean presencia y distinción.</p>
         </div>
       </section>
     </section>

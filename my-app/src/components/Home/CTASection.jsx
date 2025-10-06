@@ -3,14 +3,14 @@ function CTASection() {
     <section className="cta-section">
       <div className="cta-container">
         <div className="cta-content">
-          <h2 className="cta-title">Elegancia Redefinida. Disponible Ahora.</h2>
+          <h2 className="cta-title">Elegancia Importada. Disponible Ahora.</h2>
           <p className="cta-subtitle">
-            Descubre una nueva forma de experimentar la moda con nuestro estilo atemporal y sofisticado.
+            Descubre prendas únicas de diseño sofisticado que crean presencia y elegancia. Exclusividad garantizada.
           </p>
           
           <div className="cta-buttons">
             <button className="cta-button primary">
-              Comenzar Ahora <span className="arrow">→</span>
+              Explorar Colección <span className="arrow">→</span>
             </button>
             <button className="cta-button secondary">
               Contactar <span className="arrow">→</span>

@@ -6,9 +6,9 @@ function Carousel({ onChange }) {
   const slides = [
     {
       id: 'about',
-      title: 'Quiénes Somos',
-      subtitle: 'Nuestra Historia',
-      description: 'Somos una marca de moda de lujo centrada en crear prendas elegantes y sofisticadas, enfocada en la excelencia en el diseño y la calidad premium.',
+      title: 'Nuestra Historia',
+      subtitle: 'Selección Exclusiva',
+      description: 'Nos especializamos en seleccionar los mejores diseños importados para crear presencia y elegancia. Cada pieza es cuidadosamente elegida para ofrecerte exclusividad y profesionalismo.',
       image: 'https://picsum.photos/seed/about/800/600',
       buttonText: 'Conoce Nuestra Historia',
       buttonAction: () => onChange('about')
@@ -16,8 +16,8 @@ function Carousel({ onChange }) {
     {
       id: 'productos',
       title: 'Nuestra Colección',
-      subtitle: 'Diseños Exclusivos',
-      description: 'Explora nuestra colección exclusiva de elegancia atemporal y diseño sofisticado. Cada pieza es creada con atención al detalle y técnicas de confección tradicionales.',
+      subtitle: 'Diseños Sofisticados',
+      description: 'Explora nuestra colección de prendas importadas de diseño sofisticado. Seleccionamos meticulosamente cada pieza para entregarte exclusividad y crear tu propia presencia única.',
       image: 'https://picsum.photos/seed/products/800/600',
       buttonText: 'Ver Colección',
       buttonAction: () => onChange('productos')
@@ -25,8 +25,8 @@ function Carousel({ onChange }) {
     {
       id: 'blog',
       title: 'Blog MOI Fashion',
-      subtitle: 'Tendencias y Estilo',
-      description: 'Descubre las últimas tendencias, consejos de estilo y novedades de nuestra marca. Mantente actualizado con contenido exclusivo sobre moda y elegancia.',
+      subtitle: 'Estilo y Presencia',
+      description: 'Descubre consejos de estilo, tendencias de diseño y cómo crear tu propia presencia a través de la moda. Mantente actualizado con contenido exclusivo sobre elegancia y profesionalismo.',
       image: 'https://picsum.photos/seed/blog/800/600',
       buttonText: 'Leer Blog',
       buttonAction: () => onChange('blog')
@@ -35,7 +35,7 @@ function Carousel({ onChange }) {
       id: 'contact',
       title: 'Contáctanos',
       subtitle: 'Estamos Aquí Para Ti',
-      description: '¿Tienes preguntas sobre nuestra colección o quieres hacer una consulta personalizada? Nuestro equipo está listo para ayudarte.',
+      description: '¿Tienes preguntas sobre nuestra selección exclusiva o quieres hacer una consulta personalizada sobre estilo y presencia? Nuestro equipo está listo para ayudarte.',
       image: 'https://picsum.photos/seed/contact/800/600',
       buttonText: 'Hablemos',
       buttonAction: () => onChange('contact')
