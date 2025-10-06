@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import HeroLema from './components/HeroLema'
 import Testimonials from './components/Testimonials'
+import CTASection from './components/CTASection'
 import Carousel from './components/Carousel'
 import Home from './components/Home'
 import About from './components/About'
@@ -23,6 +24,7 @@ function App() {
             <Home />
             <HeroLema />
             <Testimonials />
+            <CTASection />
           </>
         )}
         {section === 'about' && <About />}
