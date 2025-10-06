@@ -1,15 +1,17 @@
 import './App.css'
 import { useState } from 'react'
 import Header from './components/Header'
-import HeroLema from './components/HeroLema'
-import Testimonials from './components/Testimonials'
-import CTASection from './components/CTASection'
-import Carousel from './components/Carousel'
-import Home from './components/Home'
-import About from './components/About'
-import Products from './components/Products'
-import Blog from './components/Blog'
-import Contact from './components/Contact'
+import { 
+  Carousel, 
+  HeroLema, 
+  Testimonials, 
+  CTASection, 
+  Home 
+} from './components/Home'
+import { About } from './components/About'
+import { Products } from './components/Products'
+import { Blog } from './components/Blog'
+import { Contact } from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
