@@ -10,6 +10,7 @@ import About from './components/About'
 import Products from './components/Products'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   const [section, setSection] = useState('home')
@@ -32,6 +33,7 @@ function App() {
         {section === 'blog' && <Blog />}
         {section === 'contact' && <Contact />}
       </main>
+      <Footer onChange={setSection} />
     </div>
   )
 }
