@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import Header from './components/Header'
 import HeroLema from './components/HeroLema'
+import Testimonials from './components/Testimonials'
 import Carousel from './components/Carousel'
 import Home from './components/Home'
 import About from './components/About'
@@ -21,6 +22,7 @@ function App() {
             <Carousel onChange={setSection} />
             <Home />
             <HeroLema />
+            <Testimonials />
           </>
         )}
         {section === 'about' && <About />}
