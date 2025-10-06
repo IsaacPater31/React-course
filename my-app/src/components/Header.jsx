@@ -22,9 +22,15 @@ function Header({ active, onChange }) {
       <header className="top-nav">
         <div className="nav-inner">
           <div className="brand">
-            <div className="brand-logo">
-              <img src={moilogo} alt="Fashion Logo" />
-            </div>
+            <button 
+              className="brand-button"
+              onClick={() => onChange('home')}
+              aria-label="Ir al inicio"
+            >
+              <div className="brand-logo">
+                <img src={moilogo} alt="Fashion Logo" />
+              </div>
+            </button>
           </div>
           
           {/* Hamburger Menu Button */}

@@ -13,11 +13,11 @@ function Footer({ onChange }) {
           {/* Left Section - Brand & Tagline */}
           <div className="footer-brand">
             <div className="footer-tagline">
-              <h2>Fashion Store.</h2>
+              <h2>Moi Fashion Store.</h2>
               <span className="tm-symbol">TM</span>
             </div>
             <p className="footer-copyright">
-              COPYRIGHT © 2025 FASHION STORE® LLC. ALL RIGHTS RESERVED.
+              COPYRIGHT © 2025 MOI FASHION STORE® LLC. ALL RIGHTS RESERVED.
             </p>
           </div>
 
