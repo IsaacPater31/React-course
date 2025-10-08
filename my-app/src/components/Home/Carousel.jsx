@@ -87,17 +87,6 @@ function Carousel({ onChange }) {
           ))}
         </div>
         
-        {/* Navigation Dots */}
-        <div className="carousel-dots">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
         
         {/* Navigation Arrows */}
         <button className="carousel-arrow carousel-arrow-prev" onClick={goToPrev} aria-label="Previous slide">

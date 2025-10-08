@@ -838,66 +838,7 @@ main {
   pointer-events: none;
 }
 
-/* Carousel Navigation - Liquid Glass Style */
-.carousel-dots {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
-  z-index: 10;
-  padding: 1.25rem 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 
-    0 16px 48px rgba(0, 0, 0, 0.5),
-    0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  cursor: pointer;
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-dot::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-dot.active {
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: scale(1.3);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-}
-
-.carousel-dot.active::before {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-dot:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: scale(1.15);
-}
+/* Carousel Navigation - Dots removed for cleaner design */
 
 /* Carousel Arrows - Ultra Professional Apple Style */
 .carousel-arrow {
@@ -1794,6 +1735,312 @@ main {
   border-left: 3px solid #b8860b;
 }
 
+/* Samsung Galaxy S8+, S9+, S10+ and similar high-DPI Android devices */
+@media (max-width: 480px) and (min-width: 429px), 
+       (max-width: 412px) and (min-width: 360px) and (min-resolution: 3dppx) {
+  .carousel-section {
+    height: 90vh;
+    min-height: 650px;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.75rem;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .carousel-text {
+    padding: 1.25rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 320px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.75rem;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+  }
+  
+  .carousel-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.98);
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-btn {
+    font-size: 0.8rem;
+    padding: 1rem 1.5rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 35%;
+    width: 100%;
+    max-width: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .carousel-arrow-prev {
+    left: 1rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 1rem;
+  }
+  
+  .hero-lema {
+    padding: 2rem 1rem;
+    min-height: 35vh;
+    margin: 0.5rem 0 1rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(1.1rem, 3.5vw, 2rem);
+    line-height: 1.3;
+  }
+  
+  .hero-lema-text::after {
+    width: 120px;
+    bottom: -12px;
+  }
+}
+
+/* iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus and large Android phones */
+@media (max-width: 480px) and (min-width: 429px) {
+  .carousel-section {
+    height: 65vh;
+    min-height: 450px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .carousel-content {
+    padding: 0 1.25rem;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .carousel-text {
+    padding: 1.5rem;
+    order: 1;
+  }
+  
+  .carousel-title {
+    font-size: 1.875rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .carousel-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 48%;
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+  }
+  
+  .carousel-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 1.25rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 1.25rem;
+  }
+  
+  .hero-lema {
+    padding: 2rem 1.25rem;
+    min-height: 32vh;
+    margin: 0.5rem 0 1.25rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    line-height: 1.3;
+  }
+  
+  .hero-lema-text::after {
+    width: 120px;
+    bottom: -12px;
+  }
+}
+
+/* Pixel 7, Galaxy S21, Pixel 6 and similar Android devices */
+@media (max-width: 412px) and (min-width: 376px) {
+  .carousel-section {
+    height: 75vh;
+    min-height: 520px;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.75rem;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .carousel-description {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    flex: 1;
+  }
+  
+  .carousel-btn {
+    font-size: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 40%;
+    width: 100%;
+    max-width: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.75rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.75rem;
+  }
+}
+
 /* Tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
   .nav-inner {
@@ -1823,64 +2070,69 @@ main {
   }
   
   .carousel-section {
-    height: 65vh;
-    min-height: 450px;
+    height: 70vh;
+    min-height: 500px;
     margin-bottom: 2.5rem;
   }
   
   .carousel-content {
-    padding: 0 2rem;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-    justify-content: center;
+    padding: 0 2.5rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
   }
   
   .carousel-text {
-    max-width: 550px;
-    padding: 1.5rem;
+    max-width: 480px;
+    padding: 2rem;
+    flex: 1;
   }
   
   .carousel-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .carousel-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .carousel-subtitle::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
   }
   
   .carousel-description {
-    max-width: 450px;
-    margin: 0 auto 1.5rem;
+    max-width: 100%;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
   }
   
   .carousel-image {
-    max-width: 450px;
+    max-width: 400px;
+    flex: 1;
   }
   
   .carousel-image img {
-    height: 55%;
+    height: 70%;
+    width: 100%;
   }
   
   .carousel-arrow {
-    width: 60px;
-    height: 60px;
-    font-size: 1.875rem;
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
   }
   
   .carousel-arrow-prev {
-    left: 2.5rem;
+    left: 2rem;
   }
   
   .carousel-arrow-next {
-    right: 2.5rem;
+    right: 2rem;
   }
   
   .blog {
@@ -1996,16 +2248,16 @@ main {
   }
   
   .carousel-section {
-    height: 60vh;
-    min-height: 400px;
+    height: 65vh;
+    min-height: 450px;
     margin-bottom: 2rem;
   }
   
   .carousel-content {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -2013,15 +2265,18 @@ main {
   
   .carousel-text {
     max-width: 100%;
-    padding: 1.2rem;
+    padding: 1.5rem;
+    order: 1;
   }
   
   .carousel-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
   }
   
   .carousel-subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
   
   .carousel-subtitle::after {
@@ -2030,41 +2285,35 @@ main {
   }
   
   .carousel-description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     max-width: 100%;
-    margin: 0 auto 1.2rem;
+    margin: 0 auto 1.5rem;
+    line-height: 1.5;
   }
   
   .carousel-image {
     max-width: 100%;
+    order: 2;
   }
   
   .carousel-image img {
-    height: 45%;
+    height: 50%;
+    width: 100%;
+    max-width: 350px;
   }
   
   .carousel-arrow {
-    width: 52px;
-    height: 52px;
-    font-size: 1.625rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
   }
   
   .carousel-arrow-prev {
-    left: 2rem;
+    left: 1.5rem;
   }
   
   .carousel-arrow-next {
-    right: 2rem;
-  }
-  
-  .carousel-dots {
-    bottom: 1rem;
-    padding: 0.75rem 1rem;
-  }
-  
-  .carousel-dot {
-    width: 12px;
-    height: 12px;
+    right: 1.5rem;
   }
   
   .blog {
@@ -2199,7 +2448,7 @@ main {
 
 @media (max-width: 480px) {
   .nav-inner {
-  flex-direction: column;
+    flex-direction: column;
     height: auto;
     padding: 1rem;
     gap: 1rem;
@@ -2329,6 +2578,741 @@ main {
   }
 }
 
+/* iPhone XR, iPhone 11, iPhone 12 Mini and similar Android devices */
+@media (max-width: 428px) and (min-width: 415px) {
+  .carousel-section {
+    height: 60vh;
+    min-height: 380px;
+    margin-bottom: 1.25rem;
+  }
+  
+  .carousel-content {
+    padding: 0 1rem;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .carousel-text {
+    padding: 1.25rem;
+    order: 1;
+  }
+  
+  .carousel-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .carousel-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 45%;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.375rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 1rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 1rem;
+  }
+  
+  .hero-lema {
+    padding: 1.75rem 1rem;
+    min-height: 30vh;
+    margin: 0.5rem 0 1rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(1.1rem, 3.2vw, 1.9rem);
+    line-height: 1.4;
+  }
+  
+  .hero-lema-text::after {
+    width: 100px;
+    bottom: -10px;
+  }
+}
+
+/* iPhone SE, iPhone 8, iPhone 7 and small Android devices */
+@media (max-width: 414px) {
+  .carousel-section {
+    height: 80vh;
+    min-height: 580px;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.75rem;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+  }
+  
+  .carousel-description {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    flex: 1;
+  }
+  
+  .carousel-btn {
+    font-size: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 35%;
+    width: 100%;
+    max-width: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.75rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.75rem;
+  }
+  
+  .hero-lema {
+    padding: 1.5rem 0.75rem;
+    min-height: 25vh;
+    margin: 0.25rem 0 0.75rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    line-height: 1.4;
+  }
+  
+  .hero-lema-text::after {
+    width: 80px;
+    bottom: -8px;
+  }
+}
+
+/* iPhone SE Specific (375px) */
+@media (max-width: 375px) {
+  .carousel-section {
+    height: 85vh;
+    min-height: 620px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.75rem;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+  }
+  
+  .carousel-description {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    flex: 1;
+  }
+  
+  .carousel-btn {
+    font-size: 0.7rem;
+    padding: 0.75rem 1rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+  
+  .carousel-image {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 30%;
+    width: 100%;
+    max-width: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.75rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.75rem;
+  }
+  
+  .hero-lema {
+    padding: 1.25rem 0.5rem;
+    min-height: 22vh;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(0.9rem, 2.8vw, 1.6rem);
+  }
+  
+  .hero-lema-text::after {
+    width: 70px;
+    bottom: -6px;
+  }
+}
+
+/* Galaxy S8+ 360x740 Specific Fix */
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .carousel-section {
+    height: 100vh;
+    min-height: 740px;
+    margin-bottom: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .carousel-content {
+    padding: 0;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+  }
+  
+  .carousel-text {
+    padding: 0.75rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 280px;
+    max-height: 320px;
+    display: block;
+    background: #000000 !important;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .carousel-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-description {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+    color: #ffffff !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 120px;
+  }
+  
+  .carousel-btn {
+    font-size: 0.7rem !important;
+    padding: 0.75rem 1rem !important;
+    margin-top: 0.5rem !important;
+    width: 100% !important;
+    text-align: center !important;
+    background: #ffffff !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-image {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 250px;
+  }
+  
+  .carousel-image img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.5rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.5rem;
+  }
+  
+  .hero-lema {
+    padding: 1rem 0.5rem;
+    min-height: 20vh;
+    margin: 0.25rem 0 0.5rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  .hero-lema-text::after {
+    width: 80px;
+    bottom: -8px;
+  }
+}
+
+/* Galaxy S8+ Alternative Fix - Sin altura específica */
+@media screen and (max-width: 360px) {
+  .carousel-section {
+    height: 100vh;
+    min-height: 740px;
+    margin-bottom: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .carousel-content {
+    padding: 0;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+  }
+  
+  .carousel-text {
+    padding: 0.75rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 280px;
+    max-height: 320px;
+    display: block;
+    background: #000000 !important;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .carousel-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-description {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+    color: #ffffff !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 120px;
+  }
+  
+  .carousel-btn {
+    font-size: 0.7rem !important;
+    padding: 0.75rem 1rem !important;
+    margin-top: 0.5rem !important;
+    width: 100% !important;
+    text-align: center !important;
+    background: #ffffff !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-image {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 250px;
+  }
+  
+  .carousel-image img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.5rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.5rem;
+  }
+  
+  .hero-lema {
+    padding: 1rem 0.5rem;
+    min-height: 20vh;
+    margin: 0.25rem 0 0.5rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  .hero-lema-text::after {
+    width: 80px;
+    bottom: -8px;
+  }
+}
+
+/* Samsung Galaxy S8+ Specific Fix - High DPI display */
+@media screen and (max-width: 412px) and (min-width: 360px) and (min-resolution: 3dppx),
+       screen and (max-width: 412px) and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 3) {
+  .carousel-section {
+    height: 100vh;
+    min-height: 700px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-content {
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 350px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 0.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  .carousel-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+  }
+  
+  .carousel-description {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.98);
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 0.5rem;
+  }
+  
+  .carousel-btn {
+    font-size: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-image {
+    order: 2;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-image img {
+    height: 30%;
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.75rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.75rem;
+  }
+  
+  .hero-lema {
+    padding: 1.5rem 0.75rem;
+    min-height: 30vh;
+    margin: 0.25rem 0 0.75rem 0;
+  }
+  
+  .hero-lema-text {
+    font-size: clamp(1rem, 3.2vw, 1.8rem);
+    line-height: 1.4;
+  }
+  
+  .hero-lema-text::after {
+    width: 100px;
+    bottom: -10px;
+  }
+}
+
 /* Extra small devices */
 @media (max-width: 360px) {
   .nav-inner {
@@ -2372,33 +3356,56 @@ main {
   }
   
   .carousel-section {
-    height: 70vh;
-    min-height: 500px;
-    margin-bottom: 2rem;
+    height: 45vh;
+    min-height: 300px;
+    margin-bottom: 0.5rem;
   }
   
   .carousel-content {
-    padding: 0 0.75rem;
-    gap: 1.5rem;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
   
   .carousel-text {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   .carousel-title {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
   }
   
   .carousel-subtitle {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.375rem;
   }
   
   .carousel-description {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .carousel-image img {
+    height: 30%;
+    max-width: 200px;
+  }
+  
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 0.25rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 0.25rem;
   }
   
   .info-grid {
@@ -2486,6 +3493,54 @@ main {
   
   .contact-info p {
     font-size: 0.65rem;
+  }
+}
+
+/* Tablet Landscape and Medium Laptops */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .carousel-content {
+    padding: 0 3rem;
+    gap: 2.5rem;
+  }
+  
+  .carousel-text {
+    max-width: 520px;
+    padding: 2.5rem;
+  }
+  
+  .carousel-title {
+    font-size: 2.8rem;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .carousel-description {
+    font-size: 1.05rem;
+    max-width: 480px;
+  }
+  
+  .carousel-image {
+    max-width: 500px;
+  }
+  
+  .carousel-image img {
+    height: 75%;
+  }
+  
+  .carousel-arrow {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+  
+  .carousel-arrow-prev {
+    left: 3rem;
+  }
+  
+  .carousel-arrow-next {
+    right: 3rem;
   }
 }
 
