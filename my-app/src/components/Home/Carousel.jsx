@@ -69,7 +69,14 @@ function Carousel({ onChange }) {
             <div
               key={slide.id}
               className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
             >
+              <div className="carousel-overlay"></div>
               <div className="carousel-content">
                 <div className="carousel-text">
                   <h2 className="carousel-title">{slide.title}</h2>
@@ -78,9 +85,6 @@ function Carousel({ onChange }) {
                   <button className="btn primary carousel-btn" onClick={slide.buttonAction}>
                     {slide.buttonText}
                   </button>
-                </div>
-                <div className="carousel-image">
-                  <img src={slide.image} alt={slide.title} />
                 </div>
               </div>
             </div>
