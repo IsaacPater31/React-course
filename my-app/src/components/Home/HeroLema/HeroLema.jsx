@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './HeroLema.css'
 
 function HeroLema() {
   const textRef = useRef(null)
@@ -59,3 +60,4 @@ function HeroLema() {
 }
 
 export default HeroLema
+

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './Carousel.css'
 
 function Carousel({ onChange }) {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -105,3 +106,4 @@ function Carousel({ onChange }) {
 }
 
 export default Carousel
+

@@ -1,3 +1,5 @@
+import './Footer.css'
+
 function Footer({ onChange }) {
   const handleNavClick = (section) => {
     if (onChange) {
@@ -82,3 +84,4 @@ function Footer({ onChange }) {
 }
 
 export default Footer
+

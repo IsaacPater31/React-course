@@ -1,4 +1,5 @@
-import ProductCard from './ProductCard'
+import ProductCard from '../ProductCard'
+import './Products.css'
 
 const products = [
   { id: 1, name: 'Playera Oversize', price: '$29.99', img: 'https://picsum.photos/seed/shirt1/600/600' },
@@ -23,3 +24,4 @@ function Products() {
 }
 
 export default Products
+

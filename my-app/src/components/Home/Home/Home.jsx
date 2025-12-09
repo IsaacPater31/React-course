@@ -1,3 +1,5 @@
+import './Home.css'
+
 function Home() {
   return (
     <section className="home">
@@ -30,3 +32,4 @@ function Home() {
 }
 
 export default Home
+

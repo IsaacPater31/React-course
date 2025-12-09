@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css' // Imports base styles, utilities, and layouts
 import { useState } from 'react'
 import Header from './components/Header'
 import { 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import moilogo from '../assets/moilogo.png'
+import moilogo from '../../assets/moilogo.png'
+import './Header.css'
 
 function Header({ active, onChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -104,3 +105,4 @@ function Header({ active, onChange }) {
 }
 
 export default Header
+

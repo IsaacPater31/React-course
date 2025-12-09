@@ -1,3 +1,5 @@
+import './Testimonials.css'
+
 function Testimonials() {
   const testimonials = [
     {
@@ -75,3 +77,4 @@ function Testimonials() {
 }
 
 export default Testimonials
+

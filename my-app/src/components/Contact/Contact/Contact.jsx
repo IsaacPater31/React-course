@@ -1,3 +1,5 @@
+import './Contact.css'
+
 function Contact() {
   return (
     <section className="contact">
@@ -25,3 +27,4 @@ function Contact() {
 }
 
 export default Contact
+

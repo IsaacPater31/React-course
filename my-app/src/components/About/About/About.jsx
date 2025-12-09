@@ -1,3 +1,5 @@
+import './About.css'
+
 function About() {
   return (
     <section className="about">
@@ -8,3 +10,4 @@ function About() {
 }
 
 export default About
+

@@ -1,3 +1,5 @@
+import './ProductCard.css'
+
 function ProductCard({ product }) {
   return (
     <article className="card">
@@ -18,3 +20,4 @@ function ProductCard({ product }) {
 }
 
 export default ProductCard
+

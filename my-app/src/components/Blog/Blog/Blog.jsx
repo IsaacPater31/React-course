@@ -1,4 +1,5 @@
-import InstagramPost from './InstagramPost'
+import InstagramPost from '../InstagramPost'
+import './Blog.css'
 
 function Blog() {
   const blogPosts = [
@@ -126,3 +127,4 @@ function Blog() {
 }
 
 export default Blog
+

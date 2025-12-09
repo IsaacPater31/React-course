@@ -1,3 +1,5 @@
+import './CTASection.css'
+
 function CTASection() {
   return (
     <section className="cta-section">
@@ -27,3 +29,4 @@ function CTASection() {
 }
 
 export default CTASection
+
